@@ -1,4 +1,4 @@
-package conexion;
+package PaqConexion;
 
 
 import java.sql.Connection;

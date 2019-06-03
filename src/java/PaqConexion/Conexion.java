@@ -1,4 +1,4 @@
-package conexion;
+package PaqConexion;
 
 import java.sql.*;
 
@@ -7,7 +7,7 @@ public class Conexion {
 	public Conexion() {
 		try {
                     Class.forName("com.mysql.jdbc.Driver").newInstance();
-                    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/lineaaereajuan","root","");
+                    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/integradora","root","");
 		} catch 
                     (InstantiationException | 
                     IllegalAccessException

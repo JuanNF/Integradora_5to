@@ -31,13 +31,12 @@ public class IniciarSesion extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-         
-            String correo = request.getParameter("email");
+            String correo = request.getParameter("correo");
             String contra = request.getParameter("password");
             String puesto = null;
            Validacion v = new Validacion ();
-           v.validacion(correo, contra, puesto);
-           if(puesto==null){
+           
+           /*if(puesto==null){
                response.sendRedirect("iniciar_sesion.jsp");
            }else{
                if(puesto.equals("Nutriologo")){
@@ -46,6 +45,11 @@ public class IniciarSesion extends HttpServlet {
                    response.sendRedirect("paciente.jsp");
                }else if(puesto.equals("Usuario"))
                    response.sendRedirect("usuario.jsp");
+           }*/
+           if(v.validacion(correo, contra)){
+               response.sendRedirect("inicio_usuario.jsp");
+           }else{
+               response.sendRedirect("index.jsp");
            }
     }
 
