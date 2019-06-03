@@ -1,0 +1,15 @@
+create database integradora;
+
+use integradora;
+
+create table registro (id_registro int (5) primary key auto_increment,
+nombre varchar (20) not null,
+correo varchar (60) not null,
+contra varchar (30) not null,
+edad varchar (3) not null,
+sexo varchar (10) not null,
+tamano blob,
+foto varchar (255),
+tipo_usuario varchar (20))Engine=Innodb;
+
+insert into registro values (null, "Juan Pa", "nfuerzajuan@gmail.com", "123", "20", "Masculino", null, null, "Nutriologo");
