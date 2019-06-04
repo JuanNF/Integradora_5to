@@ -1,6 +1,6 @@
 <%-- 
-    Document   : publicarReceta
-    Created on : 02-jun-2019, 15:47:31
+    Document   : publicarHistoria
+    Created on : 03-jun-2019, 21:37:59
     Author     : ubald
 --%>
 
@@ -9,16 +9,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Publicar Recetas</title>
+        <title>Publicar Historia</title>
     </head>
     <body>
     <center>
-        <h3>Registra tu Plan</h3>
+        <h3>Comparte tu Exito</h3>
         <form action="registrarDieta" method="post">
             <input type="text" name="nombre" id="nombre" placeholder="Ingrese el nombre del Plan">
             <br>
             <br>
-            <textarea id="descripcion" name="descripcion" rows="5"  placeholder="Descipcion del Plan"></textarea>
+            <textarea class="form-control" name="descipcion" rows="5"  placeholder="Descipcion del Plan"></textarea>
             <br><br>
             <input placeholder="Costo del Plan" name="costo" id="costo">
             <br><br>

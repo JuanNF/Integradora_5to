@@ -4,9 +4,33 @@
         <servlet-name>IniciarSesion</servlet-name>
         <servlet-class>Servlets.IniciarSesion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>IngresarDietas</servlet-name>
+        <servlet-class>Servlets.IngresarDietas</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VerPlanes</servlet-name>
+        <servlet-class>Servlets.VerPlanes</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VerPerfilNutriologo</servlet-name>
+        <servlet-class>Servlets.verNutriologo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>IniciarSesion</servlet-name>
         <url-pattern>/validar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IngresarDietas</servlet-name>
+        <url-pattern>/registrarDieta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerPlanes</servlet-name>
+        <url-pattern>/verPlanes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerPerfilNutriologo</servlet-name>
+        <url-pattern>/verNutriologo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

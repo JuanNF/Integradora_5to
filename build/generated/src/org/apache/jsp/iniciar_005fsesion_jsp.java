@@ -93,7 +93,7 @@ public final class iniciar_005fsesion_jsp extends org.apache.jasper.runtime.Http
       out.write("          <form action=\"validar\" method=\"post\">\n");
       out.write("            <div class=\"form-row\">\n");
       out.write("              <div class=\"form-group col-md-6\">\n");
-      out.write("                <input type=\"email\" name=\"email\" class=\"form-control\" id=\"correo\" placeholder=\"Correo\" data-rule=\"email\" data-msg=\"Ingrese su correo electronico\" />\n");
+      out.write("                <input type=\"email\" name=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Correo\" data-rule=\"email\" data-msg=\"Ingrese su correo electronico\" />\n");
       out.write("                <div class=\"validation\"></div>\n");
       out.write("              </div>\n");
       out.write("              <div class=\"form-group col-md-6\">\n");

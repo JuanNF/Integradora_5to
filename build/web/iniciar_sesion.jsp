@@ -50,7 +50,7 @@
           <form action="validar" method="post">
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="email" name="email" class="form-control" id="correo" placeholder="Correo" data-rule="email" data-msg="Ingrese su correo electronico" />
+                <input type="email" name="email" class="form-control" id="email" placeholder="Correo" data-rule="email" data-msg="Ingrese su correo electronico" />
                 <div class="validation"></div>
               </div>
               <div class="form-group col-md-6">

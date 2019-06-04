@@ -5,7 +5,7 @@
  */
 package Servlets;
 
-import Procesos.Validacion;
+import Procesos.Planes;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,9 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author ubald
  */
-public class IniciarSesion extends HttpServlet {
-Validacion v = new Validacion ();
-String puesto = null;
+public class IngresarDietas extends HttpServlet {
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -31,26 +30,23 @@ String puesto = null;
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            response.setContentType("text/html;charset=UTF-8");
-            try (PrintWriter out = response.getWriter()) {
-                String correo = request.getParameter("email");
-                String contra = request.getParameter("password");
-               if(v.validacion(correo, contra)==true){
-                   v.verPuesto(/*correo, contra*/);
-                   out.println(v.getPuesto());
-                   puesto=v.getPuesto();
-                   if(puesto.equals("Nutriologo")){
-                       response.sendRedirect("nutriologo.jsp");
-                   }else if(puesto.equals("Paciente")){
-                       response.sendRedirect("paciente.jsp");
-                   }else if(puesto.equals("UsuarioWeb")){
-                       response.sendRedirect("usuario.jsp");
-                   }
-                   response.sendRedirect("index.html");
-               }else{
-                   response.sendRedirect("iniciar_sesion.jsp");
-               }
-           }
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+                response.setContentType("text/html;charset=UTF-8");
+                String nombre = request.getParameter("nombre");
+                String descripcion = request.getParameter("descripcion");
+                int costo=Integer.parseInt(request.getParameter("costo"));
+                String tiempo = request.getParameter("tiempo");
+                String resultados = request.getParameter("resultados");
+                Planes v = new Planes();
+                if(v.registrarPlan(nombre,descripcion,costo,tiempo, resultados)){
+                    //response.sendRedirect("exitoAvion.jsp");    
+                }else{
+                    out.print(nombre + " " + descripcion + " "+ costo + " "+ tiempo+ " "+resultados +" " );
+                    out.println(v.registrarPlan(nombre,descripcion,costo,tiempo, resultados));
+                    //response.sendRedirect("errorAvion.jsp");
+            }
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

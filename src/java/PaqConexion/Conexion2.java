@@ -24,7 +24,7 @@ public class Conexion2 {
         try{
            String controlador="com.mysql.jdbc.Driver";   
            Class.forName(controlador).newInstance();
-           conexión=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/lineaaereajuan","root","");
+           conexión=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/integradora","root","");
            sentenciaSQL=getConexión().createStatement();
            System.out.println("Exito");
            
